@@ -1,1 +1,385 @@
-/* место для вашего кода */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #FFFFFF;     
+}
+
+/*
+  Раздел структурных элементов
+*/
+
+.header,
+.footer {
+  display: flex;
+  font-size: 18px;  
+}
+
+.contacts {
+  max-width: 240px;
+  flex-grow: 1;
+  line-height: 134%;
+  font-style: normal;
+}
+
+.navigation {
+  text-transform: lowercase;
+}
+
+
+/*
+  Раздел заголовка
+*/
+
+.header {
+  align-items: center;  
+  height: 105px; 
+  margin: 92px 24px;
+}
+
+.header__menu {
+  flex-grow: 1; 
+  width: 390px;  /* Должно быть 388 по макету, но всё сходится в Pixel Perfect */
+  margin-left: 34.19px;
+  margin-right: 31.81px;
+}
+
+.header__links-list {
+  display: flex;
+  gap: 29px;
+  list-style: circle;  
+}
+
+.header__links-list-item_no-bullit {
+  padding-top: 1px;
+  list-style-type: none;
+}
+
+.header__links-list-item {
+  padding-left: 4px;      /* Отодвигает точки в пунктах меню */
+}
+
+.header__link_active {
+  text-decoration: none;
+  padding-bottom: 1px;        /* Отодвигает линию подчёркивания */
+  border-bottom: 1px solid black;
+}
+
+.header__logo {  
+  display: block;
+  width: 148px;
+  height: 105px;
+}
+
+.header__logo-image {
+    height: 100%;
+}
+
+.header__address {  
+  margin-left: 180px;
+  margin-right: 30px;
+}
+ 
+.header__address-link {
+  text-decoration: none;
+}
+
+.contacts__span {
+  border-bottom: 1px solid black;
+}
+
+/*
+  Раздел входной секции
+*/
+
+.cover {
+  background-image: url(../images/cover.jpg);
+  background-size: cover;
+  background-position: center;
+  margin: 0 9px;
+  padding-bottom: 744px;
+  position: relative;
+  z-index: -2;  
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgb(0 0 0 / .6);
+  z-index: -1;
+}
+
+.cover__title {
+  width: 100%;
+  padding: 158px 49px 0px 47px;  
+  margin-right: auto;
+  position: absolute;
+  text-transform: uppercase;
+  letter-spacing: 30px;
+  line-height: 1.24;
+  font-size: 100px;  
+  color: #FFFFFF;
+}
+
+.aligned-text-center {
+  display: block;
+  text-align: center;
+}
+
+.aligned-text-right {
+  display: block;
+  text-align: right;
+  line-height: 1.15;
+  letter-spacing: 28px; 
+}
+
+.letter-spacing-extended {
+  letter-spacing: 60px;
+}
+
+.letter-spacing-extended2 {
+  letter-spacing: 57px;
+}
+
+.no-letter-spacing {
+  letter-spacing: 0;
+}
+
+.cover__description {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  padding: 657px 40px 0px 81px;
+  text-transform: uppercase;
+  color: #fff;  
+}
+
+.cover__description-text {
+  display: inline-block;
+  font-weight: 400;
+  font-size: 22px;
+  word-spacing: 300%;
+}
+
+.cover__description-text-span {
+  word-spacing: 22px;
+}
+
+.bet-button {
+  border: 1px solid #fff;
+  background-color: transparent;
+  padding: 12px 29px 11px;
+  margin-left: 65px;
+  font-weight: 400;
+  font-size: 22px;
+  text-decoration: none;
+}
+
+/*
+  Раздел секции с карточками 
+*/
+
+.lots {
+  max-width: 1034px;
+  margin: 177px 33px 0;  
+}
+
+.lots-title {
+  text-transform: uppercase;
+  font-size: 40px;
+  padding-left: 37px;
+}
+
+.lots__card-list {
+  padding-top: 26px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 25px 25px;   
+  list-style-type: none;  
+}
+
+  /*ширина центральной карточки 329px
+  и расстояния между ними на самом деле 24px и 25px */
+
+.lots__card-list-item {
+  width: 328px;
+  height: 554px;
+  flex-grow: 1;
+}
+
+.card-link {
+  display: block;
+  height: 100%;
+
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  z-index: -1;
+  text-decoration: none;
+}
+
+.card_type_film {
+  
+  background-image: url(../images/card-lot-01.jpg);
+  background-position: left top;
+  padding: 48px 35px 46px 39px;
+}
+
+.card_type_book {
+  background-image: url(../images/card-lot-02.jpg);
+  padding: 48px 36px 46px 39px;  
+}
+
+.card_type_picture {
+  background-image: url(../images/card-lot-03.jpg);
+  padding: 48px 34px 46px 40px; 
+}
+
+.card__title {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 26.4px;
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-transform: uppercase;
+}
+
+.card-text {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #fff;
+}
+
+.card__title-span {
+  word-spacing: 5px;
+}
+
+.card__text-span {
+  position: relative;
+  bottom: 5px;
+  }
+
+.lots__look-more-link {
+  display: block;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 23.48px;
+  text-transform: lowercase;
+  text-underline-offset: 5px;
+  padding-left: 39px;
+  padding-top: 29px;
+
+}
+
+/*
+  Раздел колонки с текстом
+*/
+
+.about {
+  display: flex;
+  padding: 177px 24px 0;
+}
+
+.about__column-logo {
+  width: 328px; 
+}
+
+.about__column-logo-link {
+  display: block;
+  background-color: black;
+  border-radius: 50%;
+  margin: 0 55px 0;
+  padding-top: 63px;
+  width: 237px;
+  height: 237px;    
+}
+
+.about__logo {
+  display: block;
+  width: 148px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about__column-text {
+  padding-left: 34px;
+}
+
+.about__title {
+  text-transform: uppercase;
+  font-size: 40px;
+  font-weight: 700;
+  padding-top: 98px;
+  padding-bottom: 101px;
+}
+
+.about__text {
+  width: 694px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 23px;
+}
+
+.about__text-empty-line {
+  padding-bottom: 25px;
+}
+
+
+/*
+  Раздел футера
+*/
+
+.footer {
+  display: flex;
+  height: 97px;
+  margin: 182px 58px;
+}
+
+.footer__contacts {
+  flex-grow: 1;
+  margin-right: 177px;
+}
+
+.footer__menu {
+  width: 152px;
+}
+
+.footer__menu-list {
+  text-align: center;
+  list-style-type: none;
+  padding-left: 2px;
+}
+
+.footer__menu-link {
+  text-decoration: none;
+  border-bottom: 1px solid black;
+}
+
+.footer__social-list {
+  flex-grow: 1;
+  display: flex;
+  justify-content: end;
+  list-style-type: none;
+  flex-grow: 1;
+  margin-left: 181px;
+}
+
+.footer__social-list-item {
+  margin-left: 47px;      /* Gap'ом не прокатит, расстояния разные*/
+  margin-right: 46px;
+}
+
+.image__footer {
+  width: 48px;
+}
