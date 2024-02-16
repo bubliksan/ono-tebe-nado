@@ -27,14 +27,12 @@ body {
   text-transform: lowercase;
 }
 
-
 /*
   Раздел заголовка
 */
 
 .header {
   align-items: center;  
-  height: 105px; 
   margin: 92px 24px;
 }
 
@@ -51,13 +49,14 @@ body {
   list-style: circle;  
 }
 
-.header__links-list-item_no-bullit {
-  padding-top: 1px;
-  list-style-type: none;
-}
-
 .header__links-list-item {
   padding-left: 4px;      /* Отодвигает точки в пунктах меню */
+}
+
+.header__links-list-nobullit {
+  padding-top: 1px;
+  padding-left: 0;
+  list-style-type: none;
 }
 
 .header__link_active {
@@ -83,9 +82,6 @@ body {
  
 .header__address-link {
   text-decoration: none;
-}
-
-.contacts__span {
   border-bottom: 1px solid black;
 }
 
@@ -97,7 +93,7 @@ body {
   position: relative;
   z-index: -2;
   margin: 0 9px;
-  padding-bottom: 744px;
+  min-height: 744px;
   background-image: url(../images/cover.jpg);
   background-position: center;
   background-size: cover;  
@@ -111,10 +107,9 @@ body {
 }
 
 .cover__title {
-  position: absolute;
   width: 100%;  
   margin-right: auto;
-  padding: 158px 49px 0px 47px;  
+  padding: 158px 49px 136px 47px;  
   color: #FFFFFF;
   font-size: 100px;
   line-height: 1.24;
@@ -147,15 +142,10 @@ body {
 }
 
 .cover__description {
-  position: absolute;
-  z-index: 1;
   width: 100%;
-  padding: 657px 40px 0px 81px;
+  padding: 0 30px 0 81px;
   color: #fff;
-  text-transform: uppercase;  
-}
-
-.cover__description-text {
+  text-transform: uppercase;
   display: inline-block;
   font-weight: 400;
   font-size: 22px;
@@ -163,15 +153,16 @@ body {
 }
 
 .cover__description-text-span {
-  word-spacing: 22px;
+  word-spacing: 400%;
 }
 
 .bet-button {
-  margin-left: 65px;
+  margin-left: 40px;
   border: 1px solid #fff;
-  padding: 12px 29px 11px;
+  padding: 12px 30px 12px;
   font-weight: 400;
   font-size: 22px;
+  word-spacing: normal;
   text-decoration: none;
   background-color: transparent;
 }
@@ -182,7 +173,7 @@ body {
 
 .lots {
   max-width: 1034px;
-  margin: 177px 33px 0;  
+  margin: 176px 33px 0;  
 }
 
 .lots-title {
@@ -196,7 +187,7 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 25px 25px;
-  padding-top: 26px;   
+  padding-top: 27px;   
   list-style-type: none;  
 }
 
@@ -205,14 +196,13 @@ body {
 
 .lots__card-list-item {
   flex-grow: 1;
-  width: 328px;
-  height: 554px;
+  width: 328px;  
 }
 
 .card-link {
   display: block;
   height: 100%;
-
+  text-decoration: none;
 }
 
 .card {
@@ -225,23 +215,22 @@ body {
   text-decoration: none;
   background-position: center;
   background-size: cover;
+  padding: 48px 35px 40px 39px;
 }
 
 .card_type_film {
-  padding: 48px 35px 46px 39px;
-  
   background-image: url(../images/card-lot-01.jpg);
   background-position: left top;
+  padding-bottom: 46px;
 }
 
 .card_type_book {
-  padding: 48px 36px 46px 39px;
-  background-image: url(../images/card-lot-02.jpg);  
+  background-image: url(../images/card-lot-02.jpg);
 }
 
 .card_type_picture {
-  padding: 48px 34px 46px 40px;
-  background-image: url(../images/card-lot-03.jpg); 
+  background-image: url(../images/card-lot-03.jpg);
+  padding-bottom: 46px; 
 }
 
 .card__title {
@@ -254,8 +243,9 @@ body {
   text-transform: uppercase;
 }
 
-.card-text {
+.card__text {
   color: #fff;
+  text-decoration: none;
   font-weight: 400;
   font-size: 20px;
   line-height: 24px;
@@ -268,18 +258,17 @@ body {
 .card__text-span {
   position: relative;
   bottom: 5px;
-  }
+}
 
 .lots__look-more-link {
   display: block;
-  padding-top: 29px;
+  padding-top: 30px;
   padding-left: 39px;
   font-weight: 400;
   font-size: 20px;
   line-height: 23.48px;
   text-underline-offset: 5px;
   text-transform: lowercase;
-
 }
 
 /*
@@ -335,15 +324,13 @@ body {
   padding-bottom: 25px;
 }
 
-
 /*
   Раздел футера
 */
 
 .footer {
   display: flex;
-  height: 97px;
-  margin: 182px 58px;
+  margin: 181px 58px;
 }
 
 .footer__contacts {
@@ -352,7 +339,7 @@ body {
 }
 
 .footer__menu {
-  width: 152px;
+  min-width: 152px;
 }
 
 .footer__menu-list {
@@ -368,7 +355,6 @@ body {
 
 .footer__social-list {
   display: flex;
-  flex-grow: 1;
   flex-grow: 1;
   justify-content: end;
   margin-left: 181px;
