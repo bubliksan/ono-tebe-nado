@@ -3,4 +3,5 @@ https://www.figma.com/file/uPkVZc67u6R47KI4xTMYZp/%D0%9E%D0%BD%D0%BE-%D1%82%D0%B
 2. Mozilla Firefox browser, Pixel Perfect Pro plugin
 3. Шрифты не везде сошлись идеально с макетом.
 4. Репозиторий: https://github.com/bubliksan/ono-tebe-nado.git
-5. Вторая итерация для ревью, вроде всё поправил.
+5. Третья итерация для ревью, смещение в разделе <cover> вызывали переходы строки при автоформатировании. % в word-spacing заменены на px.
+6. Ссылка на сравнение макета и шаблона: https://imgur.com/a/9MoT5Pu

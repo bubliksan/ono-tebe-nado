@@ -149,15 +149,15 @@ body {
   display: inline-block;
   font-weight: 400;
   font-size: 22px;
-  word-spacing: 300%;
+  word-spacing: 17px;
 }
 
 .cover__description-text-span {
-  word-spacing: 400%;
+  word-spacing: 21px;
 }
 
 .bet-button {
-  margin-left: 40px;
+  margin-left: 69px;
   border: 1px solid #fff;
   padding: 12px 30px 12px;
   font-weight: 400;
